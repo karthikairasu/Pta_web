@@ -26,6 +26,9 @@
     transform: scale(0.95, 0.95);
     border: 2px solid #CA9C5E!important;
 }
+.flag a{
+    text-decoration: none;
+}
 /*-----------------input mobile number-------*/
 .input-group > .intl-tel-input.allow-dropdown {
   -webkit-box-flex: 1;
