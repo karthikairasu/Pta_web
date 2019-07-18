@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PTA</title>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#41B4D8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no, user-scalable=0">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" sizes="194x194">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Play|Titillium+Web|Lobster|Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css'>
+
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link rel="manifest" href="../assets/css/manifest.json">
+</head>
+<body class="f-ubundu bg-white" onload="locate()">
+<nav class="navbar fixed-top navbar-light bg-white border-bottom shadow rtl">
+     <div class="col-3"><a class="navbar-brand" href="register.html">
+        <i class="fas fa-arrow-left"></i></a></div>
+     <div class="col-6">
+      <h5 class="mb-0 text-center">خموقعك  </h5>
+     </div>
+     <div class="col-3 text-right"><a class="ml-auto" href="#"><img src="../assets/images/favicon.png" class="text-white" style="height: 40px;width: 45px"></a></div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm col-md col-lg col-xl"></div>
+        <div class="card crd_h col-sm-10 col-md-8 col-lg-6 col-xl-6 px-0 mt-5 pt-2">
+           <div id="mapdiv" style="height:100%;width:100%;"></div>
+        </div>
+        <div class="col-sm col-md col-lg col-xl"></div>
+
+    </div>
+</div>
+<script>
+   var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
+     function locate(){
+         navigator.geolocation.getCurrentPosition(initialize,fail);
+      }
+
+     function initialize(position) {
+         var myLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+         var mapOptions = {
+           zoom: 14,
+           center: myLatLng,
+           mapTypeId: google.maps.MapTypeId.ROADMAP
+         }
+         var map = new google.maps.Map(document.getElementById('mapdiv'),
+                                       mapOptions);
+         var userMarker = new google.maps.Marker({
+             position: myLatLng,
+             map: map,
+             title: 'Hello World!'
+         });
+       }
+
+      function fail(){
+          alert('navigator.geolocation failed, may not be supported');
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDidKGjHVKSzG0la9YbX33bfBqH7e_9HTw&libraries&callback=initMap"
+    async defer></script>
+</body>
+</html>

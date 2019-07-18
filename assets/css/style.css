@@ -29,6 +29,7 @@
 .flag a{
     text-decoration: none;
 }
+
 /*-----------------input mobile number-------*/
 .input-group > .intl-tel-input.allow-dropdown {
   -webkit-box-flex: 1;
@@ -63,4 +64,38 @@
     background-clip: padding-box;
     border: 1px solid #41B4D8;
     border-radius: 1rem;
+}
+/*---------- ar rtl------------*/
+.rtl{ 
+   direction:rtl;
+}
+.fr{
+   float: right !important;
+}
+.fr .intl-tel-input.allow-dropdown .flag-container, .fr .intl-tel-input.separate-dial-code .flag-container {
+    right: auto;
+    right: 0;
+}
+.fr .intl-tel-input.allow-dropdown input, .fr .intl-tel-input.allow-dropdown input[type=text], .fr .intl-tel-input.allow-dropdown input[type=tel], .fr .intl-tel-input.separate-dial-code input, .fr .intl-tel-input.separate-dial-code input[type=text], .fr .intl-tel-input.separate-dial-code input[type=tel] {
+    padding-left: 6px;
+    padding-right: 52px;
+    margin-left: 0;
+}
+.fr .intl-tel-input .selected-flag {
+    z-index: 1;
+    position: relative;
+    width: 36px;
+    height: 100%;
+    padding: 0 8px 0 0;
+}
+.fr .intl-tel-input .selected-flag .iti-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 32px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555;
 }
