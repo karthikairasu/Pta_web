@@ -16,6 +16,16 @@
 .small-cap{
     font-variant: small-caps;
 }
+.ctry_flag{
+    height:31px;
+    width: 46px;
+}
+.ctry_flag:hover{
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease-in-out;
+    transform: scale(0.95, 0.95);
+    border: 2px solid #CA9C5E!important;
+}
 /*-----------------input mobile number-------*/
 .input-group > .intl-tel-input.allow-dropdown {
   -webkit-box-flex: 1;
