@@ -115,3 +115,17 @@
     background-repeat:no-repeat;
     background-position: center center;
 }
+.nav_bottom{
+    white-space: nowrap;
+}
+.nav_bottom table{
+    text-align: center;
+}
+.nav_bottom table thead th{
+    border:none;
+    padding:5px 20px;
+}
+.nav_bottom table thead th a{
+    text-decoration: none;
+    color: white;
+}
