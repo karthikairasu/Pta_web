@@ -105,3 +105,13 @@
 .bus_tbl thead th {
     border:2px solid #afafaf;
 }
+.bs{
+    background-image:url("../images/citybus.png");
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.tn{
+    background-image:url(../images/train.png);
+    background-repeat:no-repeat;
+    background-position: center center;
+}
