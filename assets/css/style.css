@@ -99,3 +99,9 @@
     border-right: 3px solid transparent;
     border-top: 4px solid #555;
 }
+.bus_tbl td, .bus_tbl th {
+    border:2px solid #afafaf;
+}
+.bus_tbl thead th {
+    border:2px solid #afafaf;
+}
