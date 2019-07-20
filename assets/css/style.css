@@ -103,6 +103,7 @@
     border-right: 3px solid transparent;
     border-top: 4px solid #555;
 }
+/*------------rtl close------*/
 .bus_tbl td, .bus_tbl th {
     border:2px solid #afafaf;
 }
@@ -115,6 +116,16 @@
     background-position: center center;
 }
 .tn{
+    background-image:url("../images/train.png");
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.bs_ar{
+    background-image:url("../images/citybus.png");
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.tn_ar{
     background-image:url("../images/train.png");
     background-repeat:no-repeat;
     background-position: center center;

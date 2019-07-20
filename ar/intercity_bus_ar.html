@@ -17,12 +17,12 @@
   <link href="../assets/css/style.css" rel="stylesheet">
   <link rel="manifest" href="../assets/css/manifest.json">
 </head>
-<body class="f-ubundu bg-white" onload="locate()">
+<body class="f-ubundu bg-white">
 <nav class="navbar fixed-top navbar-light bg-white border-bottom shadow rtl">
      <div class="col-3"><a class="navbar-brand" href="services_ar.html">
         <i class="fas fa-home"></i></a></div>
      <div class="col-6">
-      <h5 class="mb-0 text-center">خموقعك  </h5>
+      <h5 class="mb-0 text-center">Intercity Bus Details</h5>
      </div>
      <div class="col-3 text-right"><a class="ml-auto" href="#"><img src="../assets/images/favicon.png" class="text-white" style="height: 40px;width: 45px"></a></div>
 </nav>
@@ -48,40 +48,49 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm col-md col-lg col-xl"></div>
-        <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 px-0 mt-5 pt-2 rtl" style="height:85vh;width:100%">
-           <div id="mapdiv" style="height:100%;width:100%;position:relative;overflow:hidden;margin-bottom:54px;"></div>
+        <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4 mt-5 pt-5 px-2 bg-white rtl">
+            <div class="table-responsive bus_tbl bs_ar">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <tr>
+                    <th>Station</th>
+                    <th>Distance</th>
+                    <th>Direction</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Station 1</td>
+                    <td>1 Km</td>
+                    <td><a href="location.html"><img src="../assets/images/right.png" style="width:30px;height:30px"></a></td>
+                  </tr>
+                   <tr>
+                    <td>Station 2</td>
+                    <td>5 Km</td>
+                    <td><a href="location.html"><img src="../assets/images/right.png" style="width:30px;height:30px"></a></td>
+                  </tr>
+                   <tr>
+                    <td>Station 3</td>
+                    <td>7 Km</td>
+                    <td><a href="location.html"><img src="../assets/images/right.png" style="width:30px;height:30px"></a></td>
+                  </tr>
+                   <tr>
+                    <td>Station 4</td>
+                    <td>10 Km</td>
+                    <td><a href="location.html"><img src="../assets/images/right.png" style="width:30px;height:30px"></a></td>
+                  </tr>
+                   <tr>
+                    <td>Station 5</td>
+                    <td>10.5 Km</td>
+                    <td><a href="location.html"><img src="../assets/images/right.png" style="width:30px;height:30px"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
         </div>
         <div class="col-sm col-md col-lg col-xl"></div>
 
     </div>
 </div>
-<script>
-   var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
-     function locate(){
-         navigator.geolocation.getCurrentPosition(initialize,fail);
-      }
-
-     function initialize(position) {
-         var myLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-         var mapOptions = {
-           zoom: 14,
-           center: myLatLng,
-           mapTypeId: google.maps.MapTypeId.ROADMAP
-         }
-         var map = new google.maps.Map(document.getElementById('mapdiv'),
-                                       mapOptions);
-         var userMarker = new google.maps.Marker({
-             position: myLatLng,
-             map: map,
-             title: 'Hello World!'
-         });
-       }
-
-      function fail(){
-          alert('navigator.geolocation failed, may not be supported');
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDidKGjHVKSzG0la9YbX33bfBqH7e_9HTw&libraries&callback=initMap"
-    async defer></script>
 </body>
 </html>
