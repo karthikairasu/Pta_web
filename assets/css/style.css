@@ -10,11 +10,15 @@
 .bg-grey{
   background-color: #eeeeee;
 }
+.bg-sky {
+    background-color: #1f93a4;
+}
 .crd_h{
-    min-height: -webkit-fill-available;
+    /*min-height: -webkit-fill-available;*/
+    min-height: 50em;
 }
 .small-cap{
-    font-variant: small-caps;
+    
 }
 .ctry_flag{
     height:31px;
@@ -122,8 +126,9 @@
     text-align: center;
 }
 .nav_bottom table thead th{
-    border:none;
-    padding:5px 20px;
+    border:none !important;
+    padding: 7px 20px;
+    vertical-align: middle;
 }
 .nav_bottom table thead th a{
     text-decoration: none;
