@@ -11,7 +11,7 @@
   background-color: #eeeeee;
 }
 .bg-sky {
-    background-color: #1f93a4;
+    /*background-color: #1f93a4;*/
 }
 .crd_h{
     /*min-height: -webkit-fill-available;*/
@@ -130,6 +130,9 @@
     background-repeat:no-repeat;
     background-position: center center;
 }
+.fixed-bottom{
+   box-shadow:  0px -6px 8px 3px rgba(0, 0, 0, 0.2), inset 0px -4px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .nav_bottom{
     white-space: nowrap;
 }
@@ -138,10 +141,21 @@
 }
 .nav_bottom table thead th{
     border:none !important;
-    padding: 7px 20px;
+    padding: 0px 20px;
     vertical-align: middle;
+    font-size: 13px;
 }
 .nav_bottom table thead th a{
     text-decoration: none;
     color: white;
+}
+.dir{
+    position: fixed;
+    bottom: 64px;
+    left:20px;
+    border: 2px solid #fff;
+    border-radius: 30px; 
+    padding:  7px 8px 5px 5px;
+    z-index: 9999 !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 4px;
 }
