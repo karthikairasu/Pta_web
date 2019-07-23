@@ -159,3 +159,15 @@
     z-index: 9999 !important;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 4px;
 }
+.rain_tab li a{
+    color: #fff;
+    text-decoration: none;
+    background-color: grey;
+    padding: 6px 10px;
+    margin-right: 1px; 
+}
+.rain_tab .nav-link.active, .rain_tab .show>.nav-link {
+    color: #fff;
+    background-color: #007bff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 3px;
+}
