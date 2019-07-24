@@ -103,6 +103,9 @@
     border-right: 3px solid transparent;
     border-top: 4px solid #555;
 }
+.fz{
+    font-size: calc(0.5em + 1.9vw);
+}    
 /*------------rtl close------*/
 .bus_tbl td, .bus_tbl th {
     border:2px solid #afafaf;

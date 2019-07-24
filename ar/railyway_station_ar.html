@@ -28,18 +28,21 @@
 </nav>
 <nav class="navbar fixed-bottom navbar-light bg-golden px-2 py-2 rtl">
   <div class="table-responsive nav_bottom">
-    <table class="table table-bordered text-center mb-0">
+   <table class="table table-bordered text-center mb-0">
       <thead>
         <tr>
-          <th class="bg-sky"><a href="services_ar.html"> الصفحة الرئيسية  </a></th>
+          <th class="bg-sky"><a href="services_ar.html"><img src="../assets/images/home2.png" class="text-white" style="height: 24px;width: 24px"><br>الصفحة الرئيسية  </a></th>
           <th class="px-1"></th>
-          <th class="bg-sky"><a href="intercity_bus_ar.html"> الحافلة بين المدن  </a></th>
+          <th class="bg-sky"><a href="location_ar.html"><img src="../assets/images/wi2.png" class="text-white" style="height: 24px;width: 24px"><br>اين انا  </a></th>
           <th class="px-1"></th>
-          <th class="bg-sky"><a href="local_bus_ar.html">  الحافلات المحلية </a></th>
+          <th class="bg-sky"><a href="local_bus_ar.html"><img src="../assets/images/loc.png" class="text-white" style="height: 24px;width: 45px"><br>الحافلات المحلية  </a></th>
           <th class="px-1"></th>
-          <th class="bg-sky"><a href="railyway_station_ar.html"> قطار  </a></th>
+          <th class="bg-sky"><a href="intercity_bus_ar.html"><img src="../assets/images/int.png" class="text-white" style="height: 24px;width: 45px"><br>حافلة بين المدن  </a></th>
           <th class="px-1"></th>
-          <th class="bg-sky"><a href="location_ar.html"> اين انا </a></th>
+          <th class="bg-sky"><a href="railyway_station_ar.html"><img src="../assets/images/tr.png" class="text-white" style="height: 24px;width: 60px"><br>قطار </a></th>
+
+          <th class="px-1"></th>
+          <th class="bg-sky"><a href="service_ar.html"><img src="../assets/images/sr2.png" class="text-white" style="height: 24px;width: 24px"><br>خدمات  </a></th>
         </tr>
       </thead>
     </table>
@@ -48,35 +51,35 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm col-md col-lg col-xl"></div>
-        <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4 mt-5 pt-5 px-2 bg-white rtl">
-            <div class="table-responsive bus_tbl tn_ar">
-              <table class="table table-bordered text-center">
-                <thead>
-                  <tr>
-                    <th>Station</th>
-                    <th>Distance</th>
-                    <th>Direction</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Station 1</td>
-                    <td>12 Km</td>
-                    <td><a href="location.html"><img src="../assets/images/right.png" style="width:30px;height:30px"></a></td>
-                  </tr>
-                   <tr>
-                    <td>Station 2</td>
-                    <td>15 Km</td>
-                    <td><a href="location.html"><img src="../assets/images/right.png" style="width:30px;height:30px"></a></td>
-                  </tr>
-                   <tr>
-                    <td>Station 3</td>
-                    <td>17 Km</td>
-                    <td><a href="location.html"><img src="../assets/images/right.png" style="width:30px;height:30px"></a></td>
-                  </tr>
-                </tbody>
-              </table>
+        <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 my-5 py-5 px-2 bg-white rtl">
+          <h5 class="text-center">جدول  </h5>
+          <!-- Nav pills -->
+          <ul class="nav nav-pills text-center justify-content-center rain_tab p-0" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#date1">28 يوليو إلى 10 أغسطس  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#date2">10 أغسطس إلى 17 أغسطس  </a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="date1" class="container-fluid tab-pane active text-center"><br>
+              <img src="../assets/images/train-tbl.png" class="img-fluid">
+              <p class="mt-2">
+              <button class="btn btn-primary btn-lg btn-block">اتجاه <i class="fas fa-location-arrow text-white"></i></button></p>
+              <br>
+              <br>
             </div>
+            <div id="date2" class="container-fluid tab-pane fade text-center"><br>
+              <img src="../assets/images/train-tbl2.png" class="img-fluid">
+              <p class="mt-2">
+              <button class="btn btn-primary btn-lg btn-block">اتجاه <i class="fas fa-location-arrow text-white"></i></button></p>
+              <br>
+              <br>
+            </div>
+          </div>
         </div>
         <div class="col-sm col-md col-lg col-xl"></div>
 
