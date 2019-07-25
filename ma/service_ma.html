@@ -17,12 +17,12 @@
   <link href="../assets/css/style.css" rel="stylesheet">
   <link rel="manifest" href="../assets/css/manifest.json">
 </head>
-<body class="f-ubundu bg-white" onload="locate()">
+<body class="f-ubundu bg-white">
 <nav class="navbar fixed-top navbar-light bg-white border-bottom shadow">
      <div class="col-3"><a class="navbar-brand" href="services_ma.html">
         <i class="fas fa-home"></i></a></div>
      <div class="col-6">
-      <h5 class="mb-0 text-center">താങ്കളുടെ സ്ഥലം</h5>
+      <h5 class="mb-0 text-center">സേവനങ്ങള്</h5>
      </div>
      <div class="col-3 text-right"><a class="ml-auto" href="#"><img src="../assets/images/favicon.png" class="text-white" style="height: 40px;width: 45px"></a></div>
 </nav>
@@ -49,41 +49,19 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm col-md col-lg col-xl"></div>
-        <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 px-0 mt-5 pt-2" style="height:85vh;width:100%">
-           <div id="mapdiv" style="height:100%;width:100%;position:relative;overflow:hidden;margin-bottom:54px;"></div>
+       <div class="col-sm col-md col-lg col-xl"></div>
+       <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4 my-5 py-5 bg-white">
+            <a href="location_ma.html" class="btn btn-default bg-skyblue btn-lg btn-block  mb-4">പോലീസ് സ്റ്റേഷനുകൾ
+            &ensp;<i class="fas fa-location-arrow text-white"></i></a>
+            <a href="location_ma.html" class="btn btn-default bg-skyblue btn-lg btn-block  mb-4">ബാങ്കുകൾ
+            &ensp;<i class="fas fa-location-arrow text-white"></i></a>
+            <a href="location_ma.html" class="btn btn-default bg-skyblue btn-lg btn-block  mb-4">എടിഎംഎസ്
+            &ensp;<i class="fas fa-location-arrow text-white"></i></a>
+            <a href="location_ma.html" class="btn btn-default bg-skyblue btn-lg btn-block  mb-4">ഹോസ്പിറ്റലുകൾ
+            &ensp;<i class="fas fa-location-arrow text-white"></i></a>
         </div>
         <div class="col-sm col-md col-lg col-xl"></div>
-
     </div>
 </div>
-<script>
-   var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
-     function locate(){
-         navigator.geolocation.getCurrentPosition(initialize,fail);
-      }
-
-     function initialize(position) {
-         var myLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-         var mapOptions = {
-           zoom: 14,
-           center: myLatLng,
-           mapTypeId: google.maps.MapTypeId.ROADMAP
-         }
-         var map = new google.maps.Map(document.getElementById('mapdiv'),
-                                       mapOptions);
-         var userMarker = new google.maps.Marker({
-             position: myLatLng,
-             map: map,
-             title: 'Hello World!'
-         });
-       }
-
-      function fail(){
-          alert('navigator.geolocation failed, may not be supported');
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDidKGjHVKSzG0la9YbX33bfBqH7e_9HTw&libraries&callback=initMap"
-    async defer></script>
 </body>
 </html>
