@@ -5,7 +5,7 @@
   background-color: #41B4D8;
 }
 .bg-golden{
-  background-color: #CA9C5E;
+  background-color: #7896ab;
 }
 .bg-grey{
   background-color: #eeeeee;
@@ -152,7 +152,14 @@
     text-decoration: none;
     color: white;
 }
-.dir{
+.ser_list a:nth-child(odd){
+    background-color: #eab56d;
+}
+.ser_list a:nth-child(even){
+    background-color: #e47e7e;
+}
+.dir
+{
     position: fixed;
     bottom: 64px;
     left:20px;
