@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PTA</title>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#41B4D8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no, user-scalable=0">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="194x194">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Play|Titillium+Web|Lobster|Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css'>
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="manifest" href="assets/css/manifest.json">
+
+  <style type="text/css">
+  
+    .table td, .table th{
+        padding: 10px 3px!important;
+        vertical-align: middle!important;
+    }
+
+  </style>
+
+</head>
+<body class="f-ubundu bg-white">
+<nav class="navbar fixed-top navbar-light bg-white border-bottom shadow">
+     <div class="col-2"><a class="navbar-brand" href="services.html">
+        <i class="fas fa-home"></i></a></div>
+     <div class="col-8">
+      <h6 class="text-center">قبعد 3 تو الحجة  </h6>
+      <h6 class="mb-0 text-center">جدول  </h6>
+     </div>
+     <div class="col-2 text-right"><a class="ml-auto" href="#"><img src="assets/images/favicon.png" class="text-white" style="height: 40px;width: 45px"></a></div>
+</nav>
+<nav class="navbar fixed-bottom navbar-light bg-golden px-2 py-2">
+  <div class="table-responsive nav_bottom">
+    <table class="table table-bordered text-center mb-0">
+          <thead>
+            <tr>
+              <th class="bg-sky"><a href="<?=base_url();?>/web/service_list_ar"> <img src="<?=base_url();?>assets/images/home2.png" class="text-white" style="height: 24px;width: 24px"><br>الصفحة الرئيسية  </a></th>
+              <th class="px-1"></th>
+               <th class="bg-sky">
+                <form action="<?=base_url();?>web/where_am_i" method="post">
+                  <img src="<?=base_url();?>assets/images/wi2.png" class="text-white" style="height: 24px;width: 24px"><br>
+                    <input type="hidden" name="address" id="address1">
+                    <input type="hidden" name="page_name" value="ar">
+                    <input class="bg-sky" type="submit" value="اين انا " style="border:1px solid transparent;color:white;font-weight: bold;background-color: transparent;outline: none">
+                </form>
+              </th>
+              <th class="px-1"></th>
+              <th class="bg-sky"><a href="<?=base_url();?>/web/near_by_local_bus_list/ar"><img src="<?=base_url();?>assets/images/loc.png" class="text-white" style="height: 24px;width: 45px"><br>  حافلة بين المدن  </a></th>
+              <th class="px-1"></th>
+              <th class="bg-sky"><a href="<?=base_url();?>/web/intercity_station_list/ar"><img src="<?=base_url();?>assets/images/int.png" class="text-white" style="height: 24px;width: 45px"><br> حافلة داخل المدينة  </a></th>
+              <th class="px-1"></th>
+              <th class="bg-sky"><a href="<?=base_url();?>/web/railway_station_list/ar"><img src="<?=base_url();?>assets/images/tr.png" class="text-white" style="height: 24px;width: 60px"><br> قطار  </a></th>
+              <th class="px-1"></th>
+              <th class="bg-sky"><a href="<?=base_url();?>web/other_service/ar"><img src="<?=base_url();?>assets/images/sr2.png" class="text-white" style="height: 24px;width: 24px"><br>الخدمات</a></th>
+            </tr>
+      </thead>
+    </table>
+  </div> 
+</nav>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 my-5 py-4 px-2 bg-white justify-content-center">
+          
+          <!-- Nav pills -->
+          <ul class="nav nav-pills text-center justify-content-center rain_tab" role="tablist">
+            <li class="nav-item py-1">
+              <a class="nav-link active" data-toggle="pill" href="#table1">محطة جدة الكورنيش   </a>
+            </li>
+            <li class="nav-item py-1">
+              <a class="nav-link" data-toggle="pill" href="#table2">محطة العمرة   </a>
+            </li>
+
+            <li class="nav-item py-1">
+              <a class="nav-link" data-toggle="pill" href="#table3">محطة اجياد الحرم مكة  </a>
+            </li>
+            <li class="nav-item py-1">
+              <a class="nav-link" data-toggle="pill" href="#table4">محطة جرول الحرم مكة  </a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="table1" class="container-fluid tab-pane active text-center"><br>
+              <div class="row justify-content-center">
+
+                <div class="col-12 col-sm-12 col-md-8 px-1 bg-white">
+                    <div class="table-responsive bus_tbl bs">
+                      <table class="table table-bordered text-center">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>وقت الإنطلاق  </th>
+                            <th>جهة الوصول  </th>
+                            <th>قم الرحلة  </th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>72</td>
+                            <td>0.30</td>
+                            <td>خميس مشيط   </td>
+                            <td>518</td>
+                          </tr>
+                           <tr>
+                            <td>97</td>
+                            <td>0.30</td>
+                            <td>الطائف - الرياض   </td>
+                            <td>1322</td>
+                          </tr>
+                           <tr>
+                            <td>64</td>
+                            <td>1:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>230</td>
+                          </tr>
+                           <tr>
+                            <td>98</td>
+                            <td>1:30</td>
+                            <td>الرياض مباشر  </td>
+                            <td>1390</td>
+                          </tr>
+                           <tr>
+                            <td>121</td>
+                            <td>1:30</td>
+                            <td>تبوك  </td>
+                            <td>1560</td>
+                          </tr>
+                          <tr>
+                            <td>83</td>
+                            <td>1:30</td>
+                            <td>جيزان  </td>
+                            <td>1112</td>
+                          </tr>
+                          <tr>
+                            <td>85</td>
+                            <td>6:00</td>
+                            <td>الطائف - الرياض   </td>
+                            <td>1300</td>
+                          </tr>
+                          <tr>
+                            <td>114</td>
+                            <td>6.30</td>
+                            <td>تبوك  </td>
+                            <td>1562</td>
+                          </tr>
+                          <tr>
+                            <td>65</td>
+                            <td>7:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>500</td>
+                          </tr>
+                          <tr>
+                            <td>52</td>
+                            <td>7:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>200</td>
+                          </tr>
+                           <tr>
+                            <td>73</td>
+                            <td>7:00</td>
+                            <td>جيزان  </td>
+                            <td>864</td>
+                          </tr>
+                          <tr>
+                            <td>105</td>
+                            <td>7:30</td>
+                            <td>الطائف - القصيم </td>
+                            <td>1360</td>
+                          </tr>
+                          <tr>
+                            <td>99</td>
+                            <td>8:00</td>
+                            <td>عفيف - الرياض   </td>
+                            <td>1341</td>
+                          </tr>
+                          <tr>
+                            <td>86</td>
+                            <td>8:00</td>
+                            <td>الطائف - الرياض   </td>
+                            <td>1302</td>
+                          </tr>
+                          <tr>
+                            <td>115</td>
+                            <td>8:30</td>
+                            <td>تبوك  </td>
+                            <td>1564</td>
+                          </tr>
+                          <tr>
+                            <td>53</td>
+                            <td>9.00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>202</td>
+                          </tr>
+                           <tr>
+                            <td>41</td>
+                            <td>10.00</td>
+                            <td>الحرم المكي  </td>
+                            <td>102</td>
+                          </tr>
+                           <tr>
+                            <td>74</td>
+                            <td>10:00</td>
+                            <td>جيزان  </td>
+                            <td>866</td>
+                          </tr>
+                           <tr>
+                            <td>87</td>
+                            <td>10:00</td>
+                            <td>الرياض مباشر  </td>
+                            <td>1380</td>
+                          </tr>
+                           <tr>
+                            <td>111</td>
+                            <td>10:30</td>
+                            <td>نجران  </td>
+                            <td>1522</td>
+                          </tr>
+                          <tr>
+                            <td>108</td>
+                            <td>10:30</td>
+                            <td>بيشة - خميس   </td>
+                            <td>1500</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>11:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>204</td>
+                          </tr>
+                          <tr>
+                            <td>66</td>
+                            <td>11.00</td>
+                            <td>خميس مشيط  </td>
+                            <td>502</td>
+                          </tr>
+                          <tr>
+                            <td>42</td>
+                            <td>11:00</td>
+                            <td>اجياد الحرم المكي  </td>
+                            <td>100</td>
+                          </tr>
+                          <tr>
+                            <td>116</td>
+                            <td>11:30</td>
+                            <td>تبوك  </td>
+                            <td>1566</td>
+                          </tr>
+                           <tr>
+                            <td>88</td>
+                            <td>12:00</td>
+                            <td>الطائف - الرياض   </td>
+                            <td>1306</td>
+                          </tr>
+                          <tr>
+                            <td>43</td>
+                            <td>12:00</td>
+                            <td>الحرم المكي  </td>
+                            <td>116</td>
+                          </tr>
+                          <tr>
+                            <td>101</td>
+                            <td>13:00</td>
+                            <td>الطائف - الدمام  </td>
+                            <td>1350</td>
+                          </tr>
+                          <tr>
+                            <td>67</td>
+                            <td>13:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>506</td>
+                          </tr>
+                          <tr>
+                            <td>75</td>
+                            <td>13:00</td>
+                            <td>جيزان  </td>
+                            <td>878</td>
+                          </tr>
+                          <tr>
+                            <td>55</td>
+                            <td>13:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>206</td>
+                          </tr>
+                           <tr>
+                            <td>44</td>
+                            <td>14:00</td>
+                            <td>اجياد الحرم المكي  </td>
+                            <td>114</td>
+                          </tr>
+                          <tr>
+                            <td>89</td>
+                            <td>14:00</td>
+                            <td>الطائف - الرياض   </td>
+                            <td>1308</td>
+                          </tr>
+                          <tr>
+                            <td>117</td>
+                            <td>14:30</td>
+                            <td>تبوك  </td>
+                            <td>1570</td>
+                          </tr>
+                          <tr>
+                            <td>56</td>
+                            <td>14:30</td>
+                            <td>المدينة المنورة  </td>
+                            <td>208</td>
+                          </tr>
+                          <tr>
+                            <td>100</td>
+                            <td>15:00</td>
+                            <td>عفيف - الرياض   </td>
+                            <td>1343</td>
+                          </tr>
+                           <tr>
+                            <td>76</td>
+                            <td>15:00</td>
+                            <td>جيزان  </td>
+                            <td>868</td>
+                          </tr>
+                           <tr>
+                            <td>122</td>
+                            <td>15:00</td>
+                            <td>حائل  </td>
+                            <td>1676</td>
+                          </tr>
+                          <tr>
+                            <td>68</td>
+                            <td>15:30</td>
+                            <td>خميس مشيط  </td>
+                            <td>508</td>
+                          </tr>
+                          <tr>
+                            <td>45</td>
+                            <td>15:30</td>
+                            <td>الحرم المكي  </td>
+                            <td>118</td>
+                          </tr>
+                          <tr>
+                            <td>112</td>
+                            <td>16:00</td>
+                            <td>نجران  </td>
+                            <td>1554</td>
+                          </tr>
+                          <tr>
+                            <td>57</td>
+                            <td>16:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>210</td>
+                          </tr>
+                          <tr>
+                            <td>90</td>
+                            <td>16:00</td>
+                            <td>الرياض مباشر  </td>
+                            <td>1382</td>
+                          </tr>
+                           <tr>
+                            <td>84</td>
+                            <td>16:30</td>
+                            <td>بلجرشي  </td>
+                            <td>910</td>
+                          </tr>
+                          <tr>
+                            <td>46</td>
+                            <td>17:00</td>
+                            <td>اجياد الحرم المكي  </td>
+                            <td>122</td>
+                          </tr>
+                          <tr>
+                            <td>58</td>
+                            <td>17:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>214</td>
+                          </tr>
+                          <tr>
+                            <td>107</td>
+                            <td>17:00</td>
+                            <td>الاحساء  </td>
+                            <td>1366</td>
+                          </tr>
+                          <tr>
+                            <td>91</td>
+                            <td>17:00</td>
+                            <td>الطائف - الرياض   </td>
+                            <td>1328</td>
+                          </tr>
+                          <tr>
+                            <td>77</td>
+                            <td>17:00</td>
+                            <td>جيزان  </td>
+                            <td>870</td>
+                          </tr>
+                          <tr>
+                            <td>102</td>
+                            <td>17:30</td>
+                            <td>الطائف - الدمام  </td>
+                            <td>1352</td>
+                          </tr>
+                          <tr>
+                            <td>48</td>
+                            <td>17:45</td>
+                            <td>اجياد الحرم المكي  </td>
+                            <td>108</td>
+                          </tr>
+                          <tr>
+                            <td>92</td>
+                            <td>18:00</td>
+                            <td>الرياض مباشر  </td>
+                            <td>1384</td>
+                          </tr>
+                           <tr>
+                            <td>47</td>
+                            <td>18:00</td>
+                            <td>اجياد الحرم المكي  </td>
+                            <td>124</td>
+                          </tr>
+                          <tr>
+                            <td>118</td>
+                            <td>18:30</td>
+                            <td>تبوك  </td>
+                            <td>1574</td>
+                          </tr>
+                          <tr>
+                            <td>110</td>
+                            <td>18:30</td>
+                            <td>السليل  </td>
+                            <td>1522</td>
+                          </tr>
+                          <tr>
+                            <td>59</td>
+                            <td>19:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>218</td>
+                          </tr>
+                          <tr>
+                            <td>78</td>
+                            <td>19:00</td>
+                            <td>جيزان  </td>
+                            <td>872</td>
+                          </tr>
+                           <tr>
+                            <td>69</td>
+                            <td>19:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>510</td>
+                          </tr>
+                          <tr>
+                            <td>49</td>
+                            <td>19:30</td>
+                            <td>الحرم المكي  </td>
+                            <td>126</td>
+                          </tr>
+                           <tr>
+                            <td>79</td>
+                            <td>20:00</td>
+                            <td>جيزان  </td>
+                            <td>1110</td>
+                          </tr>
+                          <tr>
+                            <td>93</td>
+                            <td>20:30</td>
+                            <td>الطائف - الرياض   </td>
+                            <td>1316</td>
+                          </tr>
+                          <tr>
+                            <td>106</td>
+                            <td>20:30</td>
+                            <td>الطائف - القصيم  </td>
+                            <td>1378</td>
+                          </tr>
+                          <tr>
+                            <td>123</td>
+                            <td>21:00</td>
+                            <td>حائل  </td>
+                            <td>1670</td>
+                          </tr>
+                          <tr>
+                            <td>60</td>
+                            <td>21:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>222</td>
+                          </tr>
+                          <tr>
+                            <td>103</td>
+                            <td>21:00</td>
+                            <td>الطائف - الدمام  </td>
+                            <td>1354</td>
+                          </tr>
+                          <tr>
+                            <td>94</td>
+                            <td>21:00</td>
+                            <td>الرياض مباشر  </td>
+                            <td>1386</td>
+                          </tr>
+                          <tr>
+                            <td>70</td>
+                            <td>21:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>514</td>
+                          </tr>
+                           <tr>
+                            <td>119</td>
+                            <td>21:30</td>
+                            <td>تبوك   </td>
+                            <td>1578</td>
+                          </tr>
+                          <tr>
+                            <td>109</td>
+                            <td>21:30</td>
+                            <td>بيشة - خميس   </td>
+                            <td>1504</td>
+                          </tr>
+                          <tr>
+                            <td>50</td>
+                            <td>21:30</td>
+                            <td>اجياد الحرم المكي  </td>
+                            <td>128</td>
+                          </tr>
+                          <tr>
+                            <td>80</td>
+                            <td>22:00</td>
+                            <td>جيزان  </td>
+                            <td>874</td>
+                          </tr>
+                          <tr>
+                            <td>95</td>
+                            <td>22:00</td>
+                            <td>الطائف - الرياض   </td>
+                            <td>1318</td>
+                          </tr>
+                           <tr>
+                            <td>113</td>
+                            <td>22:00</td>
+                            <td>نجران  </td>
+                            <td>1552</td>
+                          </tr>
+                          <tr>
+                            <td>61</td>
+                            <td>22:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>224</td>
+                          </tr>
+                           <tr>
+                            <td>51</td>
+                            <td>22:30</td>
+                            <td>الحرم المكي  </td>
+                            <td>130</td>
+                          </tr>
+                          <tr>
+                            <td>62</td>
+                            <td>23:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>226</td>
+                          </tr>
+                          <tr>
+                            <td>96</td>
+                            <td>23:00</td>
+                            <td>الرياض مباشر  </td>
+                            <td>1388</td>
+                          </tr>
+                          <tr>
+                            <td>81</td>
+                            <td>23:00</td>
+                            <td>جيزان  </td>
+                            <td>876</td>
+                          </tr>
+                          <tr>
+                            <td>71</td>
+                            <td>23:30</td>
+                            <td>خميس مشيط  </td>
+                            <td>516</td>
+                          </tr>
+                          <tr>
+                            <td>104</td>
+                            <td>23:30</td>
+                            <td>الطائف - الدمام  </td>
+                            <td>1356</td>
+                          </tr>
+                          <tr>
+                            <td>120</td>
+                            <td>23:30</td>
+                            <td>تبوك  </td>
+                            <td>1580</td>
+                          </tr>
+                          <tr>
+                            <td>63</td>
+                            <td>23:59</td>
+                            <td>المدينة المنورة  </td>
+                            <td>228</td>
+                          </tr>
+                          <tr>
+                            <td>82</td>
+                            <td>23:59</td>
+                            <td>جيزان  </td>
+                            <td>888</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <br>
+                    
+                </div>
+                
+              </div>
+              <p class="mt-2">
+              <button class="btn btn-primary btn-lg w-75">اتجاه  <i class="fas fa-location-arrow text-white"></i></button></p>
+              <br>
+              <br>
+            </div>
+
+            <div id="table2" class="container-fluid tab-pane fade text-center"><br>
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-8 px-1 bg-white">
+                    <div class="table-responsive bus_tbl bs">
+                      <table class="table table-bordered text-center">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>وقت الإنطلاق  </th>
+                            <th>جهة الوصول  </th>
+                            <th>رقم الرحلة  </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>9:00</td>
+                            <td>الرياض   </td>
+                            <td>1400</td>
+                          </tr>
+                           <tr>
+                            <td>2</td>
+                            <td>9:30</td>
+                            <td>بيشة - خميس    </td>
+                            <td>361</td>
+                          </tr>
+                           <tr>
+                            <td>3</td>
+                            <td>10:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>550</td>
+                          </tr>
+                           <tr>
+                            <td>4</td>
+                            <td>14:00</td>
+                            <td>الرياض   </td>
+                            <td>1404</td>
+                          </tr>
+                           <tr>
+                            <td>5</td>
+                            <td>15:30</td>
+                            <td>جيزان  </td>
+                            <td>892</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>16:00</td>
+                            <td>بلجرشي  </td>
+                            <td>355</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>16:30</td>
+                            <td>الأحساء  </td>
+                            <td>1458</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>17:00</td>
+                            <td>الدمام  </td>
+                            <td>1452</td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>17:30</td>
+                            <td>السليل  </td>
+                            <td>357</td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>21:15</td>
+                            <td>القصيم  </td>
+                            <td>363</td>
+                          </tr>
+                          <tr>
+                            <td>11</td>
+                            <td>21:15</td>
+                            <td>بيشة - خميس   </td>
+                            <td>363</td>
+                          </tr>
+                          <tr>
+                            <td>12</td>
+                            <td>22:00</td>
+                            <td>خميس مشيط   </td>
+                            <td>552</td>
+                          </tr>
+                          <tr>
+                            <td>13</td>
+                            <td>23:30</td>
+                            <td>الرياض   </td>
+                            <td>1412</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <br>
+                    
+                </div>
+              </div>
+              <p class="mt-2">
+              <button class="btn btn-primary btn-lg w-75">اتجاه  <i class="fas fa-location-arrow text-white"></i></button></p>
+              <br>
+              <br>
+            </div>
+
+            <div id="table3" class="container-fluid tab-pane fade text-center"><br>
+              <div class="row justify-content-center">
+                
+                <div class="col-12 col-sm-12 col-md-8 px-1 bg-white">
+                    <div class="table-responsive bus_tbl bs">
+                      <table class="table table-bordered text-center">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>وقت الإنطلاق  </th>
+                            <th>جهة الوصول  </th>
+                            <th>رقم الرحلة  </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>14:00</td>
+                            <td>جدة</td>
+                            <td>109</td>
+                          </tr>
+                           <tr>
+                            <td>2</td>
+                            <td>16:15</td>
+                            <td>جدة</td>
+                            <td>121</td>
+                          </tr>
+                           <tr>
+                            <td>3</td>
+                            <td>19:15</td>
+                            <td>جدة</td>
+                            <td>125</td>
+                          </tr>
+                           <tr>
+                            <td>4</td>
+                            <td>20:30</td>
+                            <td>جدة</td>
+                            <td>113</td>
+                          </tr>
+                           <tr>
+                            <td>5</td>
+                            <td>21:30</td>
+                            <td>جدة</td>
+                            <td>127</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>23:30</td>
+                            <td>جدة</td>
+                            <td>135</td>
+                          </tr>                          
+                        </tbody>
+                      </table>
+                    </div>
+                    <br>
+                    
+                </div>
+                
+              </div>
+              <p class="mt-2">
+              <button class="btn btn-primary btn-lg w-75">اتجاه  <i class="fas fa-location-arrow text-white"></i></button></p>
+              <br>
+              <br>
+            </div>
+
+            <div id="table4" class="container-fluid tab-pane fade text-center"><br>
+              <div class="row justify-content-center">
+                
+                <div class="col-12 col-sm-12 col-md-8 px-1 bg-white">
+                    <div class="table-responsive bus_tbl bs">
+                      <table class="table table-bordered text-center">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>وقت الإنطلاق  </th>
+                            <th>جهة الوصول  </th>
+                            <th>رقم الرحلة  </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>12:30</td>
+                            <td>المدينة المنورة  </td>
+                            <td>400</td>
+                          </tr>
+                           <tr>
+                            <td>2</td>
+                            <td>23:00</td>
+                            <td>جيزان  </td>
+                            <td>103</td>
+                            
+                          </tr>
+                           <tr>
+                            <td>3</td>
+                            <td>22:00</td>
+                            <td>بيشة - خميس مشيط  </td>
+                            <td>103</td>
+                            
+                          </tr>
+                           <tr>
+                            <td>4</td>
+                            <td>00:30</td>
+                            <td>نجران  </td>
+                            <td>103</td>
+                          </tr>
+                           <tr>
+                            <td>5</td>
+                            <td>23:30</td>
+                            <td>تبوك  </td>
+                            <td>115</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>21:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>115</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>4:00</td>
+                            <td>جيزان  </td>
+                            <td>119</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>3:30</td>
+                            <td>تبوك  </td>
+                            <td>119</td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>00:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>119</td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>19:30</td>
+                            <td>المدينة المنورة  </td>
+                            <td>406</td>
+                          </tr>
+                          <tr>
+                            <td>11</td>
+                            <td>8:00</td>
+                            <td>جيزان  </td>
+                            <td>123</td>
+                          </tr>
+                          <tr>
+                            <td>12</td>
+                            <td>6:30</td>
+                            <td>تبوك  </td>
+                            <td>123</td>
+                          </tr>
+                          <tr>
+                            <td>13</td>
+                            <td>3:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>123</td>
+                          </tr>
+                          <tr>
+                            <td>14</td>
+                            <td>5:30</td>
+                            <td>الرياض   </td>
+                            <td>1406</td>
+                          </tr>
+                          <tr>
+                            <td>15</td>
+                            <td>11:00</td>
+                            <td>جيزان  </td>
+                            <td>131</td>
+                          </tr>
+                          <tr>
+                            <td>16</td>
+                            <td>9:30</td>
+                            <td>تبوك  </td>
+                            <td>131</td>
+                          </tr>
+                          <tr>
+                            <td>17</td>
+                            <td>7:00</td>
+                            <td>خميس مشيط  </td>
+                            <td>131</td>
+                          </tr>
+                          <tr>
+                            <td>18</td>
+                            <td>12:30</td>
+                            <td>نجران  </td>
+                            <td>131</td>
+                          </tr>
+                          <tr>
+                            <td>19</td>
+                            <td>2:00</td>
+                            <td>المدينة المنورة  </td>
+                            <td>402</td>
+                          </tr>
+                          <tr>
+                            <td>20</td>
+                            <td>8:00</td>
+                            <td>الرياض   </td>
+                            <td>1408</td>
+                          </tr>
+                          <tr>
+                            <td>21</td>
+                            <td>9:30</td>
+                            <td>الرياض   </td>
+                            <td>1402</td>
+                          </tr>                          
+                        </tbody>
+                      </table>
+                    </div>
+                    <br>
+                    
+                </div>
+
+              </div>
+              <p class="mt-2">
+              <button class="btn btn-primary btn-lg w-75">اتجاه   <i class="fas fa-location-arrow text-white"></i></button></p>
+              <br>
+              <br>
+            </div>
+
+          </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

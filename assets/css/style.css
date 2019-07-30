@@ -13,9 +13,8 @@
 .bg-sky {
     /*background-color: #1f93a4;*/
 }
-.crd_h{
-    /*min-height: -webkit-fill-available;*/
-    min-height: 50em;
+.res_h{
+    min-height: 100vh;
 }
 .small-cap{
     
@@ -152,10 +151,10 @@
     text-decoration: none;
     color: white;
 }
-.ser_list a:nth-child(odd){
+.ser_list .col-12:nth-child(odd) a{
     background-color: #eab56d;
 }
-.ser_list a:nth-child(even){
+.ser_list .col-12:nth-child(even) a{
     background-color: #e47e7e;
 }
 .dir
@@ -169,15 +168,32 @@
     z-index: 9999 !important;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 4px;
 }
-.rain_tab li a{
+.train_tab li a{
     color: #fff;
     text-decoration: none;
     background-color: grey;
     padding: 6px 10px;
     margin-right: 1px; 
 }
-.rain_tab .nav-link.active, .rain_tab .show>.nav-link {
+.train_tab .nav-link.active, .rain_tab .show>.nav-link {
     color: #fff;
     background-color: #007bff;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 3px;
+}
+.sr_types{
+   box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 2px 0 rgba(0, 0, 0, 0.19); 
+   border:0px;
+   position: relative;
+   height:100px;
+   /*background: url(../images/bg-design.jpg);*/
+   justify-content: center;
+   text-decoration: none !important;
+   color:black;
+   font-size: 1.25rem;
+}
+.sr_types:hover{
+   box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+   transition: box-shadow 0.3s ease-in-out;
+   transform: scale(0.95, 0.95);
+   color:black;
 }
