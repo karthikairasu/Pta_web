@@ -112,6 +112,10 @@
 .bus_tbl thead th {
     border:2px solid #afafaf;
 }
+.bus_tbl td, .bus_tbl th{
+        padding: 10px 3px!important;
+        vertical-align: middle!important;
+ }
 .bs{
     background-image:url("../images/citybus.png");
     background-repeat:no-repeat;
@@ -173,12 +177,25 @@
     text-decoration: none;
     background-color: grey;
     padding: 6px 10px;
-    margin-right: 1px; 
+    margin: 0px 4px;
+    white-space: nowrap!important; 
 }
 .train_tab .nav-link.active, .rain_tab .show>.nav-link {
     color: #fff;
     background-color: #007bff;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 3px;
+}
+.train_tab {
+    top: 56px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    z-index: 9999!important;
+}
+.train_tab::-webkit-scrollbar { 
+    display: none; 
+}
+.train_tab{ 
+   display: -moz-scrollbars-none ;
 }
 .sr_types{
    border:0px;
