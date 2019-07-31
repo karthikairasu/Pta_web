@@ -5,7 +5,7 @@
   background-color: #41B4D8;
 }
 .bg-golden{
-  background-color: #7896ab;
+  background-color: #42B4D8;
 }
 .bg-grey{
   background-color: #eeeeee;
@@ -151,11 +151,11 @@
     text-decoration: none;
     color: white;
 }
-.ser_list .col-12:nth-child(odd) a{
-    background-color: #eab56d;
+.ser_list .list:nth-child(odd) a{
+    background-color: #C39A64;
 }
-.ser_list .col-12:nth-child(even) a{
-    background-color: #e47e7e;
+.ser_list .list:nth-child(even) a{
+    background-color: #42B4D8;
 }
 .dir
 {
@@ -181,14 +181,13 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 3px;
 }
 .sr_types{
-   box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 2px 0 rgba(0, 0, 0, 0.19); 
    border:0px;
    position: relative;
-   height:100px;
+   height:55px;
    /*background: url(../images/bg-design.jpg);*/
    justify-content: center;
    text-decoration: none !important;
-   color:black;
+   color:white;
    font-size: 1.25rem;
 }
 .sr_types:hover{
@@ -197,3 +196,17 @@
    transform: scale(0.95, 0.95);
    color:black;
 }
+.bg-image{
+    background-image: -ms-radial-gradient(center top,ellipse farthest-corner,#CCC 0,#454545 100%);
+    background-image: -moz-radial-gradient(center top,ellipse farthest-corner,#CCC 0,#454545 100%);
+    background-image: -o-radial-gradient(center top,ellipse farthest-corner,#CCC 0,#454545 100%);
+    background-image: -webkit-gradient(radial,center top,0,center top,560,color-stop(0,#CCC),color-stop(1,#454545));
+    background-image: -webkit-radial-gradient(center top,ellipse farthest-corner,#CCC 0,#454545 100%);
+    background-image: radial-gradient(ellipse farthest-corner at center top,#CCC 0,#454545 100%);
+    background-image: -webkit-radial-gradient(center top,ellipse farthest-corner,#ccc 0,#454545 100%);
+}
+/*-------content center--------------*/
+/*.res_h{
+    min-height: 100vh;
+}*/
+/*d-flex align-items-center res_h*/
