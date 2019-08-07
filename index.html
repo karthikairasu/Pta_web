@@ -16,6 +16,29 @@
 
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="manifest" href="assets/css/manifest.json">
+  	 <script type="text/javascript">
+		var body = document.getElementsByTagName('body')[0];
+		var removeLoading = function() {
+			// In a production application you would remove the loading class when your
+			// application is initialized and ready to go.  Here we just artificially wait
+			// 3 seconds before removing the class.
+			setTimeout(function() {
+				body.className = body.className.replace(/loading/, '');
+			}, 3000);
+		};
+		removeLoading();
+     </script>
+  <style>
+  .loading {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: url('truck.gif') 50% 50% no-repeat rgb(189, 193, 194);
+    }
+  </style>
 </head>
 <body class="f-ubundu bg-grey">
 
